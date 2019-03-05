@@ -1,0 +1,83 @@
+.navbar {
+    margin-bottom: 125px;
+}
+
+.navbar-brand  {
+    text-transform: uppercase;
+    color: #3773D3;
+    margin-right: 10px;;
+    font-family: 'Rubik', sans-serif;
+    font-size: 22px;
+}
+
+.nav a {
+    color: black;
+    font-family: 'Karla' , sans-serif;
+    font-size: 16px;
+}
+
+
+
+.center-nav {
+    margin-left: 25%;
+}
+
+.about-nav {
+    margin: 0 2.5rem;
+}
+
+.sign-up {
+    padding: 0 20px;
+    border:none;
+    border-radius: 2rem;
+    color: #fff;
+    background-image: linear-gradient(to bottom right, #1fb7fb 0%, #4dc5ee 100%);
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+    font-family: 'Karla' , sans-serif;
+    font-weight: 200;
+    font-size: 16px;
+}
+
+.sign-up:focus {
+    outline: 0;
+    transform: translateY(2px);
+}
+.get-started {
+    border:none;
+    border-radius: 2rem;
+    padding: 10px 20px;
+    background-image: linear-gradient(to bottom right, #1fb7fb 0%, #4dc5ee 100%);
+    font-family: 'Karla';
+    font-weight: 200;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+.home-section {
+    padding-top: 100px;
+}
+
+
+.homepage-info {
+    font-family: 'Rubik' , sans-serif;
+}
+
+.homepage-info h2 {
+    font-size: 54px;
+    font-weight: 200;
+    padding-bottom: 15px;
+}
+
+.homepage-info p {
+    font-size: 18px;
+    font-weight: 200;
+    padding-bottom: 20px;
+}
+
+
+.homepage-image img {
+    width: 100%;
+}
+
+
