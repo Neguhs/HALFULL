@@ -9,7 +9,15 @@ app.get('/',(req, res) => {
 })
 
 app.get('/about',(req,res) => {
-    res.render("about")
+    res.render("about");
+})
+
+app.get('/signup',(req,res)=> {
+    res.render("signup");
+})
+
+app.get('/login',(req,res) => {
+    res.render("login");
 })
 
 

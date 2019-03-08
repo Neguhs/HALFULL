@@ -39,6 +39,15 @@
     font-size: 16px;
 }
 
+
+.sign-up a {
+    color: #fff;
+}
+
+.sign-up a:hover {
+    text-decoration: none;
+}
+
 .sign-up:focus {
     outline: 0;
     transform: translateY(2px);
@@ -59,11 +68,17 @@
 }
 
 
-.homepage-info {
+.homepage-info , .aboutpage-info {
     font-family: 'Rubik' , sans-serif;
 }
 
 .homepage-info h2 {
+    font-size: 54px;
+    font-weight: 200;
+    padding-bottom: 15px;
+}
+
+.aboutpage-info h1 {
     font-size: 54px;
     font-weight: 200;
     padding-bottom: 15px;
@@ -75,9 +90,124 @@
     padding-bottom: 20px;
 }
 
+.aboutpage-info p {
+    font-size: 18px;
+    font-weight: 200;
+    width: 90%;
+    line-height: 2rem;
+}
 
-.homepage-image img {
+.homepage-image img , .aboutpage-image img {
     width: 100%;
 }
+
+
+
+/* Login/Signup Form */
+.signupform-container , .loginform-container {
+    border-radius: 1rem;
+    width:25%;;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Karla' , sans-serif;
+}
+
+
+
+
+
+
+.signupform-container h2, .loginform-container h2 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 200;
+    padding: 2rem 0 ;
+}
+
+.signupform-container h2::before {
+    margin: 0 auto;
+    content: '';
+    border-top: 2px solid rgba(80, 200, 120, .9);
+    width: 15%;
+    display: block;
+    height: 10px;
+}
+
+.loginform-container h2::before {
+    margin: 0 auto;
+    content: '';
+    border-top: 2px solid  #1fb7fb;
+    width: 15%;
+    display: block;
+    height: 10px;
+
+}
+
+
+
+.signupform-container p , .loginform-container p  {
+    font-weight: 400;
+    font-size: 14px;
+    text-align: center;
+    opacity: 1;
+    padding-bottom: 2rem;
+}
+
+
+input[type="text"], input[type="password"] {
+    font-family: 'Rubik' , sans-serif;
+    font-size: 16px;
+    margin-bottom: 1.5rem;
+}
+
+input::placeholder {
+    font-family: 'Karla' , sans-serif;
+    color: rgba(51, 51, 51, 1);
+    font-size: 14x;
+}
+
+input {
+    border: 0;
+    border-bottom: 1px solid rgba(211, 211, 211, 0.8);
+    margin: 0 auto;
+}
+
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid rgba(80, 200, 120, .9);
+}
+
+
+.form-signup {
+    border:none;
+    border-radius: 2rem;
+    padding: 10px 20px;
+    background-image: linear-gradient(200deg, #1fb7fb 0%, #4dc5ee 100%);
+    font-family: 'Karla';
+    font-weight: 200;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.form-login {
+    border:none;
+    border-radius: 2rem;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    padding: 10px 25px;
+    font-family: 'Karla';
+    font-weight: 200;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    margin-bottom: 1rem;
+    background-color: #2EE59D;
+}
+
+
+/* Login/Signup Form /*
+
+
 
 
