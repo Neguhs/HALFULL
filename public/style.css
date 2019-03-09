@@ -188,7 +188,7 @@ input:focus {
     text-transform: uppercase;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
-    margin-bottom: 1rem;
+    margin: 0 auto;
 }
 
 .form-login {
@@ -201,10 +201,13 @@ input:focus {
     text-transform: uppercase;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
-    margin-bottom: 1rem;
     background-color: #2EE59D;
 }
 
+
+.account-help {
+    padding-top: 1rem;
+}
 
 /* Login/Signup Form /*
 

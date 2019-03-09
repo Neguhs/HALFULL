@@ -2,17 +2,21 @@
 
 
 <div class="container signupform-container">
+    <%-include('partials/alert.ejs')%>
     <h2> Sign up</h2>
-    <form>
+    <form action="signup" method="POST">
         <div class="row">
-            <input type="text" class="username" placeholder="Username">
+            <input type="text" id="name" name="name" placeholder="Username">
         </div>
         <div class="row">
-            <input type="password" class="username" placeholder="Password">
+            <input type="password" id="password" name="password" placeholder="Password">
         </div>
         <div class="row">
-            <input type="button" value="Sign up" class="form-signup">
+                <input type="password" id="confirmPassword" name="confirmPassword"  placeholder="Confirm password"  >
+            </div>
+        <div class="row">
+            <button type="submit" class="form-signup">Sign up</button>
         </div>
-        <p> If you have an account login <span><a href="#">Here</a></span> </p>
+        <p class="account-help"> If you have an account login <span><a href="#">Here</a></span> </p>
     </form>
 </div>
