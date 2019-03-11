@@ -202,6 +202,12 @@ input:focus {
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
     color: #fff;
     background-color: #2EE59D;
+    margin: 0 auto;
+}
+
+.errorAlert {
+    width: 50%;
+    margin: 0 auto;
 }
 
 
