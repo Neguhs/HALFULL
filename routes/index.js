@@ -3,7 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const passport = require('passport');
 const User = require("../model/user");
-const { checkAuth } = require('../config/auth');
+
 
 // Routes 
 router.get("/", (req, res) => {
@@ -26,11 +26,10 @@ router.get("/logout",(req, res) => {
   req.logout();
   req.flash('successMsg', 'You have logged out');
   res.redirect('login');
-})
+});
 
-router.get('/dashboard' , checkAuth ,(req , res )=> {
-  res.render('dashboard', { name : req.user.name});
-})
+
+
 
 // Signup handle
 router.post("/signup", (req, res) => {
@@ -84,7 +83,7 @@ router.post("/signup", (req, res) => {
 // Login Handle 
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', {
-    successRedirect: 'dashboard',
+    successRedirect: '/dashboard',
     failureRedirect: 'login',
     failureFlash: true
   })(req, res, next);
