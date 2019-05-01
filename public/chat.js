@@ -1,7 +1,5 @@
 
-
 var socket = io();
-
 
 let messageField = document.getElementById('messageField');
 let username = document.querySelector('.userName');
@@ -11,10 +9,9 @@ let chatBox = document.getElementById('messages');
 let onlineUsers = document.getElementsByClassName('onlineUser');
 
 let currentID;
-
-
 for(i=0; i< onlineUsers.length; i++){
     onlineUsers[i].addEventListener('click',(e)=>{
+        e.target.parentElement.style.backgroundColor = 'rgba(211,211,211,0.5)';
         let user = e.target.textContent;
         let name = user.trim();
         socket.emit('requestChatID',({name}));
@@ -25,46 +22,24 @@ for(i=0; i< onlineUsers.length; i++){
         
     })
 }
-
  const privateMessage = (currentID) =>{
      let id = currentID;
      let msg = messageField.value;
      let user = username.textContent;
      socket.emit('privateMsg',({id , user , msg}));
+     messageField.value = '';
  }
-
-
-
-
-console.log(chatBox);
-
-
-console.log(form);
-console.log(button);
-
 
 form.addEventListener('submit',(e) => {
     e.preventDefault();
     privateMessage(currentID);
-    // sendMessage();
 })
 
 
 socket.on('super',(data)=>{
-    // console.log(data);
-    // console.log(data.msg);
     chatBox.append(constructMsg(data));
 })
 
-
-
-// const  sendMessage = () => {
-//     let msg = messageField.value;
-//     let user = username.textContent;
-//     socket.emit('chat message', ({msg , user}))
-//     console.log(socket.id);
-//     messageField.value = '';
-// }
 
 
 socket.on('chat message',(data) => {
@@ -89,45 +64,6 @@ socket.on('chat id',() =>{
     name = user.trim();
     socket.emit('user',{name,id});
 })
-
-
-
-
-
-
-
-// (getMessage = () => {
-//     socket.on('chat message' ,(msg) => {
-//         console.log('Hello');
-//     })
-// })();
-
-
-
-
-
-
-
-
-
-
-
-// form.addEventListener('submit', (e) => {
-//     e.preventDefault();
-//     sendMessage();
-// })
-
-
-
-// const sendMessage = () => {
-//     let userMsg = messages.val();
-//     console.log(userMsg);
-//     messages.val('');
-// }
-
-
-
-
 
 
 

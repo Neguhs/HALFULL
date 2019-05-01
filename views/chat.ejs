@@ -14,27 +14,30 @@
     <title>Document</title>
 </head> 
 <body>
-    <div class="container-flulid">
+    <div class="container-fluid">
         <div class="row">
                 <%-include('sidebar.ejs')%>
-<div class="col-2" id=OnlineUsers-container>
-        <% User.forEach((user)=>{ %>
-            <%  if(user.name !== name){ %>
-                <div class="row pl-3">
-                    <p class="onlineUser"> <%= user.name %></p>  
-                </div>
-           
-          <%  }  %>
-       <%  }) %>
-</div>
-<div class="col-8 border-left" id="chatfield">
-        <ul id="messages"></ul>
-        <form action="" id="message-form">
-                <input id="messageField" autocompete="off"><button id="sendBtn">Send</button>
-        </form>
 
-</div>
-</div>
+                <div class="col-2" id=OnlineUsers-container>
+                        <% User.forEach((user)=>{ %>
+                            <%  if(user.name !== name){ %>
+                                <div class="row pl-3 onlineUser-holder">
+                                    <a href="#" class="onlineUser" > <%= user.name %></a>  
+                                </div>
+                           
+                          <%  }  %>
+                       <%  }) %>
+                </div>
+                <div class="col-8 border-left" id="chatfield">
+                        <ul id="messages"></ul>
+                        <form action="" id="message-form">
+                                <input id="messageField" autocompete="off"><button id="sendBtn">Send</button>
+                        </form>
+                
+                </div>
+
+        </div>
+            
 </div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="/chat.js"></script>
