@@ -18,28 +18,10 @@
 <body>
     <div class="container-fluid">
         <div class="row">
-            <div class="col-2 border-right" id="sidebar">
-                <div class="row justify-content-center pt-5 img-container">
-                    <div class="img-frame">
-                        <img src="/assets/dekuu.jpg" class="img-circle">
-                    </div>
-                </div>
-                <div class="row justify-content-center pt-3">
-                    <p class="userName"> <%= name %></p> 
-                </div>
-                <div class="list-group icons-list pt-3 pb-3">
-                    <a href="/dashboard" class="list-group-item mb-3 " ><i class="fas fa-home"></i>Home</a>
-                    <a href="#" class="list-group-item mb-3 mt-3"><i class="far fa-user"></i>Profile</a>
-                    <a href="#" class="list-group-item mb-3 mt-3"><i class="far fa-comment"></i>Chat</a>
-                    <a href="#" class="list-group-item mt-3"><i class="far fa-heart"></i>Story</a>
-                </div>
-                <div class="list-group icons-list">
-                    <a href="#" class="list-group-item mt-5"><i class="fas fa-sign-out-alt"></i>Logout</a>
-                </div>
-            </div>
+                <%-include('sidebar.ejs')%>
 <div class="col" id="dashboard">
         <div class="container text-center" id="greeting-container">
-            <h1 id="greeting-header">Good Evening , Justin! </h1>
+            <h1 id="greeting-header">Good Evening , <%= name %>! </h1>
             <p class="greeting-message pt-5">
                 " We all face challenges to our mental health. Depression and anxiety changes the way we think,
                 feel and deal with tough times. Well done for taking the first step. You can follow other
@@ -53,26 +35,48 @@
                 </div>
             </div>
 </div>
-
-
-
 </div>
 <div id="quizform-container" class="col">
-        <div class="container" id="quizform">
-            <div class="row">
-                <div class="col-4 progressbar-container text-center">
-                    <p>Hey</p>
+    <div class="container" id="quizform">
+        <div class="col text-center">
+            <h4 id="questiontracker" class="pb-3"></h4>
+            <p id="currentQuestion"></p>
+            <div class="row justify-content-around">
+                <div class="btn-group">
+                    <input type="button" class="button" id="responsebtn" value="1">
+                    <input type="button" class="button" id="responsebtn" value="2">
+                    <input type="button" class="button" id="responsebtn" value="3">
+                    <input type="button" class="button" id="responsebtn" value="4">
+                    <input type="button" class="button" id="responsebtn" value="5">
                 </div>
-                <div class="col border-left">
-                        <p>I feel like breaking things sometimes / I have thoughts of hurting others</p>
-                    </div>
             </div>
+        </div>
+        <div class="row justify-content-center">
+            <button type="button" class="get-results" id="resultbtn">Get Results</button>
+        </div>
 
     </div>
+</div>
+
+<div id="resultform-container" class="col">
+    <div class="container">
+        <div class="result-container container text-center">
+            <h1> Results</h1>
+            <p id="summary"></p>
+            <ul class="result-list">
+            </ul>
+            <p id="quote" class="text-center"></p>
+        </div>
+        <div class="container continue-container">
+            <div class="continue">
+                <a href="/dashboard">Done</a>
+            </div>
+        </div>
     </div>
-    
-    </div>
- </div>
+</div>
+
+</div>
+</div>
 </div>
 <script src="quiz.js"></script>
 </body>

@@ -61,7 +61,19 @@
     font-weight: 200;
     text-transform: uppercase;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    outline:0;
 }
+
+.get-started:focus{
+    outline:0;
+}
+
+.get-started a {
+    color: #fff;
+    list-style-type: none;
+    text-decoration: none;
+}
+
 
 .home-section {
     padding-top: 100px;
@@ -214,9 +226,139 @@ input:focus {
 .account-help {
     padding-top: 1rem;
 }
-
 /* Login/Signup Form /*
 
 
+
+
+/* About page */
+
+#about-section{
+    padding: 3rem 0;
+    width: 50%;
+    font-family: 'Rubik',sans-serif;
+}
+
+/* 
+#about-section h2{
+    width: 50%;
+} */
+/* 
+#aboutUs {
+    padding-bottom: 
+} */
+
+
+#aboutUs::after{
+    margin: .5rem auto;
+    content: '';
+    border-top: 2px solid #43e97b;
+    width: 10%;
+    display: block;
+    height: 10px;
+}
+
+
+#about-section p{
+    text-align: center;
+    font-weight: 300;
+    line-height: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    padding: 2.5rem 0;
+}
+
+#about-section span {
+ font-weight: 400;
+ color: #3773D3;
+}
+
+#aboutButton{
+    border:none;
+    /* border-radius: 2rem; */
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    padding: 10px 25px;
+    font-family: 'Karla';
+    font-weight: 200;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background-color: #2EE59D;
+    margin: 0 auto;
+}
+
+#aboutButton a {
+    color: white;
+    text-decoration: none;
+}
+
+#feature-section h1{
+    font-family: 'Rubik' , sans-serif;
+    letter-spacing: .1rem;
+    font-size: 2rem;
+    padding-top: 3rem;
+}
+
+#feature-sections{
+    font-weight: 400;
+    padding: 5rem 0;
+}
+
+#feature-sections h4 {
+    font-family: 'Rubik', sans-serif;
+}
+
+#feature-sections p {
+    line-height: 1.5rem;
+    width: 80%;
+    font-family: 'Karla' , sans-serif;
+}
+
+
+
+/* Stories Page */
+
+#Stories-header{
+    padding-bottom: 8rem;
+}
+
+#Stories-header p{
+    margin: 0 auto;
+    width: 30%;
+}
+
+
+#Stories::after{
+    margin: .5rem auto;
+    content: '';
+    border-top: 2px solid #1fb7fb;
+    width: 5%;
+    display: block;
+    height: 10px;
+}
+
+#user-story{
+    padding: 0 0 5rem 2.5rem;
+}
+
+
+#post-name{
+    font-family: 'Rubik' , sans-serif;
+    font-size: 1.5rem;
+    letter-spacing: .05rem;
+    font-weight: 400;
+    color: #1fb7fb;
+}
+
+#post-subject{
+     font-size: 1.25rem;
+     font-family: 'Karla' , sans-serif;
+}
+
+#post-content{
+    width:  55%;
+    color: rgba(0, 0, 0, .9);
+    line-height: 1.5rem;
+}
 
 

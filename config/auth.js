@@ -1,5 +1,4 @@
 
-
 /* Middleware function check if user is logged in before serving specific pages */
 module.exports = {
     checkAuth: function(req, res , next) {

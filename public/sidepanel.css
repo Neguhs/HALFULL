@@ -1,0 +1,64 @@
+
+#sidebar {
+    background-color: #fff;
+    height: 100vh;
+    box-shadow: 8px 0 10px -6px rgba(211, 211, 211,.7);
+}
+
+.userName {
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: .1rem;
+}
+
+.userName::first-letter {
+    text-transform: uppercase;
+}
+
+.brand-name {
+    text-transform: uppercase;
+    font-family: 'Rubik' , sans-serif;
+    color: #3773D3;
+    font-weight: 400;
+}
+
+.img-frame {
+    height: 5.5rem;
+    width: 5.5rem;
+}
+
+.img-circle{
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+}
+.list-group-item  {
+    font-family: 'Karla', sans-serif;
+    font-weight: 400;
+    font-size: 1.15rem;
+    color: #000;
+    text-decoration: none;
+    list-style: none;
+    border: none;
+}
+.list-group-item:hover {
+    background-color: rgba(211, 211, 211, .2);
+    text-decoration: none;
+    color: #000;
+}
+.list-group-item:hover > i {
+    color: #43e97b
+}
+
+/* .list-group-item:hover{
+    border-left: 0.145rem solid black;
+} */
+
+.icons-list {
+    margin-top: 8rem;
+}
+.list-group-item i {
+    padding-right: .9rem;
+    color: rgba(211, 211, 211, .8);
+}
+

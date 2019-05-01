@@ -5,22 +5,22 @@
     background-color: #F7F8FC;
     background-image: url(/assets/doctor.svg);
     background-repeat: no-repeat;
-    background-size: 28rem;
+    background-size: 24rem;
     background-position: bottom right;
     animation: moveRight;
     animation-duration: 2s;
     animation-play-state: paused;
-    display: none;
-
 }
 
 #quizform-container {
+    display: none;
     background-color: #F7F8FC;
 }
 
 #sidebar {
     background-color: #fff;
     height: 100vh;
+    border-right: 1px solid rgba(211, 211, 211, 1);
 }
 
 .userName {
@@ -53,7 +53,7 @@
 .list-group-item  {
     font-family: 'Karla', sans-serif;
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: 1.15rem;
     color: #000;
     text-decoration: none;
     list-style: none;
@@ -91,7 +91,7 @@
 .greeting-message {
     letter-spacing: .125rem;
     line-height: 2rem;
-    font-size: 1.2rem;
+    font-size: 1rem;
 }
 .dashboard-message {
     padding-top: 5rem;
@@ -124,30 +124,171 @@
     padding-top: 15rem;
 }
 
-
 .progress-container {
     height: 100%;
     background-color: red;
 }
 
 #quizform {
-    padding: 5rem 0;
-    width: 60%;
+    padding: 2.5rem 0;
+    width: 40%;
     border-radius: 1rem;
     box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+#questiontracker {
+    letter-spacing: .1rem;
 }
 
 
 #quizform p {
     font-family: 'Rubik';
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: .15rem;
 }
 
 
+.get-results {
+    border:none;
+    border-radius: 2rem;
+    background-image: linear-gradient(to bottom right, #1fb7fb 0%, #4dc5ee 100%);
+    padding: .5rem 1rem;
+    font-size: .8rem;
+    font-family: 'Karla';
+    font-weight: 200;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background-color: #2EE59D;
+    margin-top: 1rem;
+    display: none;
+    animation: moveDown;
+    animation-duration: 2s;
+    animation-play-state: paused;
+}
+
+.get-results:focus {
+    outline: 0;
+}
+
+
 /* Quiz */
 
+.btn-group {
+    padding: 1.5rem 0;
+}
+
+#responsebtn {
+    border: 1px solid rgba(0, 0, 0, .5);
+    border-radius: 2rem;
+    padding: .6rem 1.1rem;
+    font-family: 'Karla';
+    font-weight: 200;
+    text-transform: uppercase;
+    color: #007bff;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-left: 1.5rem;
+    font-size: 1rem;
+ }
+
+ #responsebtn:hover {
+     color:#fff;
+     background: #007bff;
+ }
+
+ #responsebtn:focus {
+     outline: 0;
+ }
+
+
+
+
+ /* resultform */
+#resultform-container {
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+    font-size: 1rem;
+    display: none;
+    background-color: #F7F8FC;
+}
+
+.result-container{
+    width: 60%;
+    margin-top: 15%;
+    border: 1px solid rgba(211, 211, 211, 0.5);
+    border-radius: 2rem;
+    box-shadow: 0px 8px 14px rgba(0, 0, 0, 0.1);
+}
+
+.result-container h1 {
+    font-family: 'Rubik' , sans-serif;
+    font-weight: 400;
+    color:#2EE59D;
+    font-size: 2rem;
+    padding: 2rem 0; 
+}
+
+.result-container h4 {
+    padding-bottom: 1rem;
+    font-size: 1.5rem;
+    font-family: 'Karla', sans-serif;
+}
+
+
+#summary {
+    padding-bottom: 1rem;
+    font-size: 1rem;
+    font-family: 'Rubik', sans-serif;
+    font-weight: 400;
+}
+
+#quote {
+    margin: 0 auto;
+    padding: 1.5rem 0;
+    font-family: 'Karla' , sans-serif;
+    font-weight: italic;
+    width: 60%;
+    font-size: .8rem;
+    text-align: center;
+}
+
+
+.continue-container {
+    width: 60%;
+}
+
+.continue {
+    font-weight: 300;
+    font-family: 'Karla' , sans-serif;
+    letter-spacing: .1rem;
+    text-align: right;
+    padding-top: 1.2rem;
+}
+
+.continue a {
+
+    text-decoration: none;
+    color: #2EE59D;
+}
+ 
+
+
+.result-list li {
+    line-height: 2rem;
+    font-size: 1.15rem;
+    font-weight: 300;
+    font-family: 'Karla', sans-serif;
+    list-style: none;
+    padding: 1rem 0;
+}
+
+
+
+
+
+ /* result form */
 
 
 
@@ -157,5 +298,11 @@
     0% {opacity: 100%;}
     50% {opacity: 50%;}
     100% {opacity: 0; transform: translateX(20%);}
+}
+
+
+@keyframes moveDown {
+    0% {opacity: 0;  transform: translateY(-100%);}
+    100% {opacity: 100; transform: translateY(0%);}
 }
 /* Animation */

@@ -4,10 +4,17 @@ const passport = require('passport');
 const mongoose = require('mongoose');
 const flash = require('connect-flash');
 const session = require('express-session');
+const http = require('http');
+const User = require("./model/user");
+const server = http.createServer(app);
+const io = require('socket.io').listen(server)
+server.listen('3000');
 require('./config/passport')(passport);
 
+const connectionString = "mongodb+srv://Negus:treefort943@hfcluster-qp7sv.mongodb.net/test?retryWrites=true";
+
 // Connect Database 
-mongoose.connect("mongodb://localhost:27017/halfull",{useNewUrlParser: true})
+mongoose.connect(connectionString,{useNewUrlParser: true})
 .then(()=> console.log('Database Connected'))
 .catch(err => console.log(err));
 
@@ -44,12 +51,44 @@ app.use((req,res,next) => {
 //Routes
 app.use('/',require('./routes/index'));
 app.use('/',require('./routes/dashboard/dashboard'));
-
-
-
 // Listen for server 
-const port = process.env.port || 3000;
-app.listen( port, () => console.log('Server is running'))
+// const port = process.env.port || 3000;
+// app.listen( port, () => console.log('Server is running'))
 
 
 
+io.on('connection' , (socket) =>{
+    console.log('a user connected');
+    io.emit('chat id');
+    socket.on('user' ,(data) =>{
+        User.findOneAndUpdate({name: data.name}, {$set:{chatID : data.id , status: true}}, (err, founduser)=>{
+            if(err){
+                console.log(err)
+            } else {
+                console.log("Success");
+            }
+        })
+    });
+
+
+    socket.on('requestChatID',(data)=>{
+        User.findOne({name: data.name} ,(err, founduser)=>{
+            let userID = founduser.chatID;
+            socket.emit('sendChatID',({userID}));
+        })
+    })
+
+
+    socket.on('privateMsg',(data)=>{
+        let info = data;
+        io.to(data.id).emit('super',(info));
+    })
+
+    socket.on('disconnect', () =>{
+        console.log('user disconnected');
+    });
+
+    socket.on('chat message' ,(data) => {
+        io.emit('chat message' , data);
+    })
+})

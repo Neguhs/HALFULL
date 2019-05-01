@@ -3,6 +3,7 @@ const router = express.Router();
 const bcrypt = require("bcryptjs");
 const passport = require('passport');
 const User = require("../model/user");
+const Story = require("../model/story");
 
 
 // Routes 
@@ -12,6 +13,17 @@ router.get("/", (req, res) => {
 
 router.get("/about", (req, res) => {
   res.render("about");
+});
+
+
+router.get("/stories",  (req,res) => {
+  Story.find({}, (err, allStories )=> {
+    if(err){
+      console.log(err);
+    } else {
+      res.render('stories.ejs', {Stories : allStories});
+    }
+  })
 });
 
 router.get("/signup", (req, res) => {
@@ -27,8 +39,6 @@ router.get("/logout",(req, res) => {
   req.flash('successMsg', 'You have logged out');
   res.redirect('login');
 });
-
-
 
 
 // Signup handle

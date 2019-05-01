@@ -1,0 +1,75 @@
+#storyform-container {
+    padding-top: 20rem;
+}
+
+#story-form {
+    padding: 2rem 0;
+    width: 60%;
+    border-radius: 1rem;
+    /* box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23); */
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Karla' , sans-serif;
+    margin: 0 auto;
+}
+
+
+#name , #subject{
+    padding-bottom: .25rem;
+    margin-bottom: 1rem;
+}
+
+#storySubmit{
+    border:none;
+    border-radius: 2rem;
+    background-image: linear-gradient(to right, #43e97b 0%, #38f9d7 100%);
+    padding: 5px 15px;
+    font-family: 'Karla';
+    font-weight: 200;
+    text-transform: uppercase;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    background-color: #2EE59D;
+    margin-right: 2rem;
+    letter-spacing: .1rem;
+    font-size: 12px;
+}
+
+
+
+input[type="text"]{
+    font-family: 'Rubik' , sans-serif;
+    font-size: 16px;
+
+} 
+
+
+input::placeholder , textarea::placeholder {
+    font-family: 'Karla' , sans-serif;
+    color: rgba(0, 0, 0,  .8);
+    font-size: 14x;
+}
+
+input  {
+    border: 0;
+    border-bottom: 1px solid rgba(211, 211, 211, .4);
+    margin-left: 3.5rem;
+}
+input:focus {
+    outline: 0;
+    border-bottom: 1px solid rgba(80, 200, 120, .9);
+}
+
+textarea:focus{
+    outline: 0;
+}
+
+
+textarea{
+    width: 80%;
+    border: 0;
+    margin-left: 3.5rem;
+    padding-bottom: 3rem;
+    resize: none;
+}
+
+

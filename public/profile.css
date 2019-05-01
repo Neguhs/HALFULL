@@ -1,0 +1,17 @@
+#profileHeader{
+    font-family: 'Karla' , sans-serif;
+    font-weight: 300;
+    padding-top: 2rem;
+    border-bottom: 1.5px solid rgba(211, 211, 211, .8);
+
+}
+
+#profileName{
+    color: rgba(0, 0, 0, .9);
+    letter-spacing: .1rem;
+    padding:0 0 1rem 5rem;
+}
+
+#profileName::first-letter {
+    text-transform: uppercase;
+}

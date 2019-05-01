@@ -1,0 +1,29 @@
+<%-include('partials/header.ejs')%>
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col text-center" id="Stories-header">
+            <h1 id="Stories"> Stories</h1>
+            <P class="text-center"> Here is a collection of stories from the amazing members of the HALFULL community. Each story is unique and personal to the user have a story ? Tell us about it </P>
+        </div>
+    </div>
+
+
+
+
+
+        
+<% Stories.forEach((story) => { %>
+    <div class="container" id="user-story">
+        <div class="row" id="post-name">
+            <p><%= story.name %> <p>
+        </div>
+        <div class="row" id="post-subject">
+            <p><%= story.subject %> </p>
+        </div>
+        <div class="row" id="post-content">
+            <p> <%= story.post %></p>
+        </div>
+    </div>
+ <% }) %>
+    </div>
+

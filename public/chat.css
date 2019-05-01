@@ -1,0 +1,30 @@
+#messages {
+    padding-top: 20px;
+    list-style: none;
+}
+
+#messages {
+    list-style: none;
+}
+
+
+#userMsg {
+    margin-top: .5rem;
+    width: 20%;
+    color: #000;
+}
+
+
+form {
+    margin: 0 auto;
+    position: fixed;
+    bottom: 0;
+    padding: 3px;
+    width: 100%;
+}
+form input {
+    width: 70%;
+    /* border: 0; */
+}
+
+
