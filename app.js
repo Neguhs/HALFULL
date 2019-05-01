@@ -8,7 +8,7 @@ const http = require('http');
 const User = require("./model/user");
 const server = http.createServer(app);
 const io = require('socket.io').listen(server);
-let port = process.env.port || 3000;
+const port = process.env.PORT || 3000;
 server.listen(port);
 require('./config/passport')(passport);
 
