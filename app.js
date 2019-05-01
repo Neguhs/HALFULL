@@ -12,7 +12,7 @@ const port = process.env.PORT || 3000;
 server.listen(port);
 require('./config/passport')(passport);
 
-const connectionString = "mongodb+srv://Negus:treefort943@hfcluster-qp7sv.mongodb.net/test?retryWrites=true";
+const connectionString = "mongodb+srv://Negus:<password>@hfcluster-qp7sv.mongodb.net/test?retryWrites=true";
 
 // Connect Database 
 mongoose.connect(connectionString,{useNewUrlParser: true})
