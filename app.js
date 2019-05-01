@@ -7,8 +7,9 @@ const session = require('express-session');
 const http = require('http');
 const User = require("./model/user");
 const server = http.createServer(app);
-const io = require('socket.io').listen(server)
-server.listen('3000');
+const io = require('socket.io').listen(server);
+let port = process.env.port || 3000;
+server.listen(port);
 require('./config/passport')(passport);
 
 const connectionString = "mongodb+srv://Negus:treefort943@hfcluster-qp7sv.mongodb.net/test?retryWrites=true";
